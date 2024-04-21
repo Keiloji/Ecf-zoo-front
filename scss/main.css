@@ -11972,7 +11972,7 @@ html {
 }
 
 main {
-  margin-bottom: 250px;
+  margin-bottom: 200px;
 }
 
 footer.footer {
@@ -11999,12 +11999,41 @@ p {
   height: 100%;
   background-image: url(../images/Arcadia\ jungle/bird-7170235_1280.jpg);
   background-size: cover;
-  filter: brightness(0.7);
+  filter: brightness(0.8);
 }
 .hero-scene * {
   position: relative;
 }
 .hero-scene .hero-scene-content {
+  height: 332px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.hero-scene2 {
+  position: relative;
+}
+.hero-scene2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Arcadia\ jungle/panda-2422740_1280.jpg);
+  background-size: cover;
+  filter: brightness(0.8);
+}
+.hero-scene2 * {
+  position: relative;
+}
+.hero-scene2 .hero-scene2-content {
   height: 332px;
   display: flex;
   flex-direction: column;
