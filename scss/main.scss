@@ -87,3 +87,53 @@ p{
     text-align: justify;
 }
 
+.hero-scene3{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    background-image: url(../JS/);
+    background-size: cover;
+    filter: brightness(0.8);   
+    } 
+    *{
+        //positionner les éléments devant le ::before
+        position: relative;
+    } 
+    .hero-scene3-content{
+        
+        height: 332px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    }
+    .text-justify{
+        text-align: justify;
+    }
+    .savane-img-head{
+        width: 100%;
+    }
+    .leger{
+        opacity: 0.2;
+    }
+    .moyen{
+        opacity: 0.5;
+    }
+    .lourd{
+        opacity: 0.9;
+    }
+    .savane-title{
+        width: auto;
+    }
+    .box{
+        box-sizing: border-box;
+    }
+    
+    
