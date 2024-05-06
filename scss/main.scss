@@ -6,10 +6,13 @@ html{
     min-height: 100%;
 }
 
-main{margin-bottom: 200px;}
+main{margin-bottom: 250px;
+    padding: 0%;
+    
+}
 
 footer.footer{
-    padding: 15px;
+    padding: 20px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -22,6 +25,7 @@ p{
 
 .hero-scene{
     position: relative;
+    margin-bottom: 15px;
     &::before{
         content: "";
         position: absolute;
@@ -96,7 +100,7 @@ p{
         left: 0;
         width: 100%;
         height: 100%;
-    background-image: url(../JS/);
+    background-image: url(../images/Arcadia\ marais/animals-3738997_1280.jpg);
     background-size: cover;
     filter: brightness(0.8);   
     } 
@@ -135,5 +139,34 @@ p{
     .box{
         box-sizing: border-box;
     }
-    
-    
+    .hero-scene4{
+        position: relative;
+        margin-bottom: 15px;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        background-image: url(../images/Arcadia\ savane/singe.jpg.jpg);
+        background-size: cover;
+        filter: brightness(0.8);   
+        } 
+        *{
+            //positionner les éléments devant le ::before
+            position: relative;
+        } 
+        .hero-scene4-content{
+            
+            height: 332px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .contact-title{
+        margin-bottom: 25px;
+    }

@@ -11972,11 +11972,12 @@ html {
 }
 
 main {
-  margin-bottom: 200px;
+  margin-bottom: 250px;
+  padding: 0%;
 }
 
 footer.footer {
-  padding: 15px;
+  padding: 20px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -11989,6 +11990,7 @@ p {
 
 .hero-scene {
   position: relative;
+  margin-bottom: 15px;
 }
 .hero-scene::before {
   content: "";
@@ -12092,4 +12094,38 @@ p {
 
 .savane-title {
   width: auto;
+}
+
+.box {
+  box-sizing: border-box;
+}
+
+.hero-scene4 {
+  position: relative;
+  margin-bottom: 15px;
+}
+.hero-scene4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Arcadia\ savane/singe.jpg.jpg);
+  background-size: cover;
+  filter: brightness(0.8);
+}
+.hero-scene4 * {
+  position: relative;
+}
+.hero-scene4 .hero-scene4-content {
+  height: 332px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-title {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=main.css.map */
