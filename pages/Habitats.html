@@ -3,39 +3,38 @@
     <div class="hero-scene3-content">
     <h1>Habitats</h1><br/><br/><br/><br/>
 </div>
-
+    </div>
 </div>
-        <!-- Section pour afficher les habitats -->
-        <section id="habitats-section" class="text-align text-center text-justify">
-            <article>
-                <!-- Chaque carte d'habitat sera générée dynamiquement ici -->
-            <div class="habitat-card" data-habitat="savane" >
+        <!-- Section habitats Savane -->
+        
+            <article class="text-center">
+            <div id="Savane" class="habitat" >
                 <div style="background-color: #ead0937d;" class="savane-title">
                     <h2 class="text-center">Bienvenue dans la Majestueuse Savane</h2>
                 
                     <img class="w-100 savane-Img-head" src="../images/Arcadia savane/elephant-1170112_1280.jpg" alt="ensemble d'animaux dans la savane ">
                 </div>
                     <div style="background-color: #83603f52;">
-                    <p class="lourd text-black text-justify">Plongez au cœur de l'immensité africaine et laissez-vous éblouir par la splendeur de notre habitat savane, où la vie sauvage règne en maître. Dans ce vaste écosystème, où les herbes dorées dansent au gré du vent, huit espèces emblématiques vous attendent pour une aventure inoubliable. Des majestueux Éléphants d'Afrique aux gracieux Zèbres des Plaines, en passant par les élégantes Girafes Rupicapra, les impressionnants Rhinocéros Noirs, les rapides Guépards d'Afrique, les puissants Lions d'Afrique, les agiles Gazelles de Thomson et les paisibles Hippopotames, chacun vous offre un spectacle unique dans son habitat naturel. Rejoignez-nous pour un safari inoubliable et laissez-vous transporter par la magie de ce paysage emblématique de l'Afrique.
+                    <p class="lourd text-black text-justify">Plongez au cœur de l'immensité africaine et laissez-vous éblouir par la splendeur de notre habitat savane, où la vie sauvage règne en maître. Dans ce vaste écosystème, où les herbes dorées dansent au gré du vent, sept espèces emblématiques vous attendent pour une aventure inoubliable. Des majestueux Éléphants d'Afrique aux gracieux Zèbres des Plaines, en passant par les élégantes Girafes Rupicapra, les rapides Guépards d'Afrique, les puissants Lions d'Afrique, les agiles Gazelles de Thomson et les paisibles Hippopotames, chacun vous offre un spectacle unique dans son habitat naturel. Rejoignez-nous pour un safari inoubliable et laissez-vous transporter par la magie de ce paysage emblématique de l'Afrique.
                     </p>
-                <button style=" background-color: #655618; border-radius: 15px; color: white;" class="view-details-btn btn">Savane</button>
-            </div>
-        </div>
+                            <button id="togg1" style=" background-color: #655618; border-radius: 15px; color: white;" class="view-details-btn btn">Savane</button>
+                    </div>
+                </div>
             </article>
-
-            <article class="text-justify text-center box" style="background-color: #65561837;">
-                <div>
-                    <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
-                        <img class="w-100" src="../images/Arcadia savane/africa-209309_1280.jpg" alt="Éléphant adulte">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
+        <!-- Section détail habitat de la savane -->
+            <section id="d1" class="text-align text-center text-justify savaneDetails" style="display: none;">
+                <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
+                    <div>
+                            <div class="row row-cols-2 align-items-center">
+                                    <div>
+                                            <img class="w-100" src="../images/Arcadia savane/africa-209309_1280.jpg" alt="Éléphant adulte">
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > L'Élégance des Éléphants d'Afrique :<br> <br> Observez ces majestueux géants, se déplaçant en troupeaux à travers la savane, tandis qu'ils se nourrissent de feuillages et prennent des bains revigorants dans les points d'eau.</h5>
+                        <h5 class="text-justify text-center" > L'Élégance des Éléphants d'Afrique :<br> <br> Observez ces majestueux géants, se déplaçant en troupeaux à travers la savane, tandis qu'ils se nourrissent de feuillages et prennent des bains revigorants dans les points d'eau.</h5>
                     </div>
                 </div>
             </div>
@@ -44,7 +43,11 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                            <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                            <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                        </div>
+                    
                                 <p>
                                     Parents : Jumbo & Léa <br>
                                 Race : Éléphant d'Afrique <br>
@@ -71,19 +74,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #65561837;">
+            <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia savane/lion-951778_1280.jpg" alt="Lion Adulte">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" >Le Rugissement des Lions d'Afrique :<br> <br>Entendez le puissant rugissement de ces monarques de la savane, régnant sur leur territoire avec majesté et surveillant leur fière famille avec vigilance.</h5>
+                        <h5 class="text-justify text-center" >Le Rugissement des Lions d'Afrique :<br> <br>Entendez le puissant rugissement de ces monarques de la savane, régnant sur leur territoire avec majesté et surveillant leur fière famille avec vigilance.</h5>
                     </div>
                 </div>
             </div>
@@ -92,7 +94,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Simba & Nala <br>
                                     Race : Lion d'Afrique <br>
@@ -120,29 +125,33 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #65561837;">
+            <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia savane/prague-4484518_1280.jpg" alt="Groupe de girafes">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
+
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > La Beauté des Girafes 
+                        <h5 class="text-justify text-center" >La Beauté des Girafes 
                             Rupicapra : <br> <br> Émerveillez-vous devant le cou élancé de ces gracieuses girafes, se nourrissant des feuilles des acacias avec leur langue préhensile, et écoutant le doux son de leur broutement paisible.</h5>
                     </div>
                 </div>
             </div>
                 </div>
                 </div>
+
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Gigi & Léo (Race : Girafe Rupicapra, Habitat : Savane)<br>
                                     Enfants : Léo<br>
@@ -168,19 +177,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #65561837;">
+            <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia savane/zebra-3408882_1280.jpg" alt="Zèbres">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > La Grace des Zèbres des Plaines : <br> <br>
+                        <h5 class="text-justify text-center" > La Grace des Zèbres des Plaines : <br> <br>
                             Admirez les rayures distinctives de ces magnifiques créatures, parcourant les vastes plaines herbeuses en quête de nourriture, et appréciez leur rôle vital dans l'équilibre écologique de la savane.
                             </h5>
                     </div>
@@ -191,7 +199,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Rayan & Zara<br> 
                                     Race : Zèbre des Plaines<br> 
@@ -218,19 +229,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #65561837;">
+            <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia savane/cheetah-3749166_1280.jpg" alt="Guépard">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" >  La Furtivité des Guépards d'Afrique : <br> <br> Soyez témoin de la vitesse fulgurante de ces prédateurs élancés, se déplaçant avec une grâce incomparable à travers les plaines, à la recherche de leur proie.
+                        <h5 class="text-justify text-center" >  La Furtivité des Guépards d'Afrique : <br> <br> Soyez témoin de la vitesse fulgurante de ces prédateurs élancés, se déplaçant avec une grâce incomparable à travers les plaines, à la recherche de leur proie.
                             </h5>
                     </div>
                 </div>
@@ -240,7 +250,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Speedy & Caramel<br> 
                                     Race : Guépard d'Afrique<br> 
@@ -248,7 +261,7 @@
                                     Enfants : Luna<br> 
                                     État de l'animal : Bon<br> 
                                     Nourriture : Viande, poulet, poisson<br> 
-                                    Grammage de la nourriture : 2 kg<br> 
+                                    Grammage de la nourriture : 5 kg<br> 
                                     Date de passage : 11/03/2024<br> 
                                     Détail de l'état de l'animal : En pleine forme, en train de jouer.<br> 
                                 </p>
@@ -267,19 +280,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #65561837;">
+            <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia savane/thomsons-gazelle-7795328_1280.jpg" alt="Gazelle">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > La Vivacité des Gazelles de Thomson : <br> <br>Observez la vivacité et l'agilité de ces antilopes gracieuses, bondissant avec légèreté à travers les herbes hautes à la moindre alerte.
+                        <h5 class="text-justify text-center" > La Vivacité des Gazelles de Thomson : <br> <br>Observez la vivacité et l'agilité de ces antilopes gracieuses, bondissant avec légèreté à travers les herbes hautes à la moindre alerte.
                             </h5>
                     </div>
                 </div>
@@ -289,7 +301,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Gazou & Bella <br>
                                     Race : Gazelle de Thomson<br>
@@ -316,19 +331,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #65561837;">
+            <article class="text-justify text-center box detailHabitatSavane" style="background-color: #65561837;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia savane/hippo-4486152_640.jpg" alt="Hippopotame">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > La Quiétude des Hippopotames : <br> <br> Contemplez la quiétude des hippopotames, se prélassant dans les eaux paisibles des marécages, tandis que leurs puissants corps se reposent du soleil brûlant de la savane.
+                        <h5 class="text-justify text-center" > La Quiétude des Hippopotames : <br> <br> Contemplez la quiétude des hippopotames, se prélassant dans les eaux paisibles des marécages, tandis que leurs puissants corps se reposent du soleil brûlant de la savane.
                             </h5>
                     </div>
                 </div>
@@ -338,7 +352,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Hugo & Lila <br>
                                     Race : Hippopotame<br>
@@ -365,35 +382,38 @@
                 
 
             </article>
+        </section>
 
-            <article>
-            <div class="habitat-card" data-habitat="jungle" >
+
+        <!-- Section habitat Jungle -->
+        <article class="text-center">
+            <div id="Jungle" class="habitat">
                 <div style="background-color: #abd3e282;" class="savane-title">
                     <h2 class="text-center"> Bienvenue dans la Mystérieuse Jungle</h2>
                 
                     <img class="w-100 jungle-Img-head" src="../images/Arcadia jungle/suspension-bridge-959853_1280.jpg" alt="Pont dans la jungle">
                 </div>
                     <div style="background-color: #53a48456">
-                    <p class="lourd text-black text-justify">Plongez au cœur de la végétation luxuriante et laissez-vous émerveiller par la diversité de notre habitat de la jungle. Dans cette oasis de vie où la canopée dense crée un véritable sanctuaire pour la faune sauvage, huit espèces emblématiques vous attendent pour une expérience inoubliable. Des majestueux Tigres du Bengale aux gracieux Panda Roux, en passant par les redoutables Anacondas, les colorés Toucans, les énigmatiques Capybaras, les agiles Singes araignées, les impressionnants Paresseux à trois doigts et les fascinants Caméléons panthères, chaque créature vous offre un spectacle unique dans son habitat naturel. Rejoignez-nous pour une exploration captivante et laissez-vous envoûter par la magie de cette jungle mystérieuse.
+                    <p class="lourd text-black text-justify">Plongez au cœur de la végétation luxuriante et laissez-vous émerveiller par la diversité de notre habitat de la jungle. Dans cette oasis de vie où la canopée dense crée un véritable sanctuaire pour la faune sauvage, huit espèces emblématiques vous attendent pour une expérience inoubliable. Des majestueux Tigres du Bengale aux gracieux Panda Roux, en passant par les Toucans colorés , les énigmatiques Capybaras, les agiles Singes araignées, les impressionnants Paresseux à trois doigts, les magnifiques Ara ararauna, et enfin les fascinants Caméléons panthères, chaque créature vous offre un spectacle unique dans son habitat naturel. Rejoignez-nous pour une exploration captivante et laissez-vous envoûter par la magie de cette jungle mystérieuse.
                     </p>
-                <button style=" background-color: #04635B; border-radius: 15px; color: white;" class="view-details-btn btn">Jungle</button>
+                <button id="togg2" style=" background-color: #04635B; border-radius: 15px; color: white;" class="view-details-btn btn">Jungle</button>
             </div>
         </div>
             </article>
-
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+        <!-- Section détail habitat de la jungle -->
+        <section id="d2" class="text-align text-center text-justify jungleDetails" style="display: none;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/animals-1852823_1280.jpg" alt="Pandas roux">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Panda Roux : <br> <br>
+                        <h5 class="text-justify text-center" > Panda Roux : <br> <br>
                             Évoluant avec grâce parmi les branches, ces adorables pandas roux apportent une touche de charme à la jungle, leurs mouvements agiles captivant les visiteurs.
                             </h5>
                     </div>
@@ -404,7 +424,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Milka et Mila<br>
                                     Race : Panda Roux<br>
@@ -432,19 +455,16 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="..//images/Arcadia jungle/bird-7170235_1280.jpg" alt="Toucan">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
-                
-            
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" >  Toucans :<br> <br>
+                        <h5 class="text-justify text-center" >  Toucans :<br> <br>
                             Les cris exotiques de ces magnifiques toucans résonnent à travers la canopée, leurs becs colorés perçant le feuillage dense de la jungle.
                             </h5>
                     </div>
@@ -455,7 +475,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Tango et Nathalie<br>
                                     Race : Toucan<br>
@@ -483,19 +506,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/macaw-2655392_1280.jpg" alt="2 Ara">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" >  Ara ararauna :<br> <br>
+                        <h5 class="text-justify text-center" >  Ara ararauna :<br> <br>
                             La palette de couleurs de ces magnifiques aras enchante les cieux de la jungle, leurs cris résonnant à travers la canopée.
                             </h5>
                     </div>
@@ -506,7 +528,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Parents : Pili, Rio et Naca<br> 
                                     Race : Ara ararauna<br> 
@@ -532,19 +557,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/tiger-934042_1280.jpg" alt="2 Tigre">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" >   Tigres du Bengale : <br> <br>
+                        <h5 class="text-justify text-center" >   Tigres du Bengale : <br> <br>
                             Symboles de puissance et de grâce, ces félins majestueux se déplacent avec une élégance silencieuse parmi les frondaisons.
                             
                             </h5>
@@ -556,7 +580,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Malia et Mali <br>
                                     Race : Tigre du Bengale<br>
@@ -583,19 +610,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/pygmy-sloth-62869_1280.jpg" alt="Paresseux">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" >Paresseux à trois doigts : <br> <br>
+                        <h5 class="text-justify text-center" >Paresseux à trois doigts : <br> <br>
                             Accrochés aux branches, ces créatures douces et paisibles incarnent la quiétude de la jungle, se déplaçant lentement à travers les arbres.
                             
                             </h5>
@@ -607,7 +633,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Sloopy et Speedy<br>
                                     Race : Paresseux à trois doigts<br>
@@ -635,19 +664,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/spider-monkeys-8247905_1280.jpg" alt="singes">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Singes araignées :<br> <br>
+                        <h5 class="text-justify text-center" > Singes araignées :<br> <br>
                             Acrobaties éblouissantes et agilité sans pareille, ces primates intrépides se balancent d'arbre en arbre, créant un spectacle captivant.
                             
                             </h5>
@@ -659,7 +687,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Paul et Caroline <br>
                                     Race : Singe araignée<br>
@@ -686,21 +717,19 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/panther-chameleon-3377556_1280.jpg" alt="Caméléons">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Caméléons panthères :<br> <br>
+                        <h5 class="text-justify text-center" > Caméléons panthères :<br> <br>
                             Maîtres du camouflage, ces reptiles fascinants se fondent parfaitement dans leur environnement, observant le monde avec leurs yeux perçants.
-                            
                             </h5>
                     </div>
                 </div>
@@ -710,7 +739,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Marta et Nelly<br>
                                     Race : Caméléon panthère<br>
@@ -737,21 +769,19 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #a5dbef35;">
+            <article class="text-justify text-center box detailHabitatJungle" style="background-color: #a5dbef35;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia jungle/capybara-7295601_1280.jpg" alt="Capybara">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Capybara : <br> <br>
+                        <h5 class="text-justify text-center" > Capybara : <br> <br>
                             Ces rongeurs aquatiques, aussi appelés les "grands rats d'eau", trouvent refuge dans les marécages de la jungle, où ils peuvent nager et se prélasser paisiblement.
-                            
                             </h5>
                     </div>
                 </div>
@@ -761,7 +791,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Palo et Malo<br>
                                     Race : Capybara<br>
@@ -787,36 +820,41 @@
                 
 
             </article>
+        </section>
 
 
-            <article>
-            <div class="habitat-card" data-habitat="marais" >
-                <div style="background-color: #d49ca663;" class="savane-title">
-                    <h2 class="text-center"> Bienvenue dans notre habitat du Marais Écologique</h2>
-                
-                    <img class="w-100 marais-Img-head" src="../images/Arcadia marais/yellow-water-lily-7253137_1280.jpg" alt="Grenouille et nénuphar">
+        <!-- Section habitat Marais -->
+            <article class="text-center">
+                <div id="Marais" class="habitat">
+                    <div style="background-color: #d49ca663;" class="savane-title">
+                        <h2 class="text-center"> Bienvenue dans notre habitat du Marais Écologique</h2>
+                    
+                        <img class="w-100 marais-Img-head" src="../images/Arcadia marais/yellow-water-lily-7253137_1280.jpg" alt="Grenouille et nénuphar">
+                    </div>
+                        <div style="background-color: #8f9b675d">
+                        <p class="lourd text-black text-justify">Plongez au cœur de la végétation luxuriante et découvrez notre habitat de Marais. Ce sanctuaire humide abrite une multitude d'espèces fascinantes. Des cygnes majestueux glissent sur les eaux calmes, tandis que les tortues de Floride se prélassent au soleil. Les caïmans à lunettes se tapissent dans les roseaux, attendant patiemment leur proie. Les canards colverts barbotent joyeusement, égayant les rives avec leurs couleurs vives. Les chouettes effraies veillent sur le marais, silencieuses et mystérieuses. Les grenouilles rousses chantent en chœur la nuit tombée, créant une symphonie naturelle. Les couleuvres à collier se faufilent habilement entre les herbes, discrètes et insaisissables. Les cerfs des marais se déplacent gracieusement à travers les marécages, leur silhouette élégante se dessinant contre le ciel.
+                            Explorez ce marais mystérieux et laissez-vous envoûter par la magie de cet écosystème unique.
+                        </p>
+                    <button id="togg3" style=" background-color: #6D914C; border-radius: 15px; color: white; " class="view-details-btn btn">Marais</button>
                 </div>
-                    <div style="background-color: #8f9b675d">
-                    <p class="lourd text-black text-justify">Plongez au cœur de la végétation luxuriante et laissez-vous émerveiller par la diversité de notre habitat de la jungle. Dans cette oasis de vie où la canopée dense crée un véritable sanctuaire pour la faune sauvage, huit espèces emblématiques vous attendent pour une expérience inoubliable. Des majestueux Tigres du Bengale aux gracieux Panda Roux, en passant par les redoutables Anacondas, les colorés Toucans, les énigmatiques Capybaras, les agiles Singes araignées, les impressionnants Paresseux à trois doigts et les fascinants Caméléons panthères, chaque créature vous offre un spectacle unique dans son habitat naturel. Rejoignez-nous pour une exploration captivante et laissez-vous envoûter par la magie de cette jungle mystérieuse.
-                    </p>
-                <button style=" background-color: #6D914C; border-radius: 15px; color: white;" class="view-details-btn btn">Marais</button>
             </div>
-        </div>
-            </article>
+                </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+        <!-- Section détail habitat Marais -->
+
+        <section id="d3" class="text-align text-center text-justify maraisDetails" style="display: none;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/swans-8635535_1280.jpg" alt="Cygnes">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Cygnes tuberculés :<br> <br>
+                        <h5 class="text-justify text-center" > Cygnes tuberculés :<br> <br>
                             Élégants et majestueux, ces cygnes se déplacent gracieusement à travers les eaux calmes du marais, offrant un spectacle paisible aux visiteurs.
                             
                             </h5>
@@ -828,7 +866,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Léo et Cindy<br>
                                     Race : Cygne tuberculé<br>
@@ -855,19 +896,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/florida-1974896_1280.jpg" alt="Tortues">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Tortues de Floride : <br> <br>
+                        <h5 class="text-justify text-center" > Tortues de Floride : <br> <br>
                             Discrètes mais fascinantes, ces tortues se prélassent sur les rives ensoleillées du marais, observant le monde avec leurs yeux curieux.
                             </h5>
                     </div>
@@ -878,7 +918,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Léa et Nas<br>
                                     Race : Tortue de Floride<br>
@@ -905,19 +948,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/caiman-7287780_1280.jpg" alt="Caïman">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Caïmans à lunettes : <br> <br>
+                        <h5 class="text-justify text-center" > Caïmans à lunettes : <br> <br>
                             Gardiens des eaux sombres, ces reptiles prédateurs se tapissent silencieusement, prêts à saisir leur proie avec une précision redoutable.
                             </h5>
                     </div>
@@ -928,7 +970,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Maria<br>
                                     Race : Caïman à lunettes<br>
@@ -955,19 +1000,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/duck-1893080_1280.jpg" alt="Canard">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Canards colverts : <br> <br>
+                        <h5 class="text-justify text-center" > Canards colverts : <br> <br>
                             Colorés et bruyants, ces canards animent les étendues d'eau avec leurs cris joyeux et leurs plongeons agiles à la recherche de nourriture.
                             </h5>
                     </div>
@@ -978,7 +1022,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Mia<br>
                                     Race : Canard colvert<br>
@@ -1005,19 +1052,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/barn-owl-1208035_1280.jpg" alt="Chouette">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Chouettes effraies : <br> <br>
+                        <h5 class="text-justify text-center" > Chouettes effraies : <br> <br>
                             Énigmatiques et mystérieuses, ces rapaces nocturnes habitent les arbres creux du marais, surveillant leur territoire avec une vigilance silencieuse.
                             </h5>
                     </div>
@@ -1028,7 +1074,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Hugo et Himba <br>
                                     Race : Chouette effraie<br>
@@ -1055,19 +1104,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/common-frog-6613175_1280.jpg" alt="Grenouille">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Grenouilles rousses : <br> <br>
+                        <h5 class="text-justify text-center" > Grenouilles rousses : <br> <br>
                             Symboles du marais, ces grenouilles émettent leur chant caractéristique, ajoutant une ambiance sonore unique à l'habitat.
                             </h5>
                     </div>
@@ -1078,7 +1126,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Lily et Tommy<br>
                                     Race : Grenouille rousse<br>
@@ -1105,19 +1156,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/grass-snake-1287414_1280.jpg" alt="Couleuvre">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Couleuvres à collier :<br> <br> 
+                        <h5 class="text-justify text-center" > Couleuvres à collier :<br> <br> 
                             Discrètes mais indispensables, ces serpents se faufilent habilement à travers les roseaux, contribuant à l'équilibre de l'écosystème.
                             </h5>
                     </div>
@@ -1128,7 +1178,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Adam et Max<br>
                                     Race : Couleuvre à collier<br>
@@ -1154,19 +1207,18 @@
 
             </article>
 
-            <article class="text-justify text-center box" style="background-color: #d49ca658;">
+            <article class="text-justify text-center box detailHabitatMarais" style="background-color: #d49ca658;">
                 <div>
                     <div class="row row-cols-2 align-items-center">
-                    <div id="animal-details">
+                    <div>
                         <img class="w-100" src="../images/Arcadia marais/deer-4815886_1280.jpg" alt="Cerf">
-                        <!-- D'autres détails des animaux seront structurés de manière similaire -->
                     </div>
                 
             
                 <div class="container p-4">
                 <div class="align-items-center">
                     <div class="col">
-                        <h5 id="animal-name" class="text-justify text-center" > Cerfs des marais : <br> <br>
+                        <h5 class="text-justify text-center" > Cerfs des marais : <br> <br>
                             Élégants et gracieux, ces cerfs parcourent les zones boisées et les prairies humides du marais, ajoutant une touche de majesté à cet écosystème diversifié. Leurs bois imposants et leur démarche délicate en font des symboles de la nature sauvage, et leur présence ajoute une dimension particulière à l'habitat du marais.
                             </h5>
                     </div>
@@ -1177,7 +1229,10 @@
                 <div class="row row-cols-2 align-items-center">
                     <div class="container p-4">
                         <div class="align-items-center">
-                            <div class="col">
+                            <div class="col"><div class="action-image-buttons">
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                                <button data-show="connected" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
+                            </div>
                                 <p class="text-center">
                                     Thor et Lila<br>
                                     Race : Cerf des marais<br>
@@ -1203,11 +1258,6 @@
                 
 
             </article>
-
-
         </section>
-        
 
-
-
-</div>
+<script src="/js/habitats.js"></script> 

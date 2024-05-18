@@ -23,11 +23,15 @@ Vous pouvez nous joindre par téléphone au 0102030405, par e-mail à Contact@Ar
         </div>
         <div class="mb-3">
             <label for="EmailInput" class="form-label">Email</label>
-            <input type="email" class="form-control" id="EmailInput" placeholder="Vôtre adresse mail " name="Email"> 
+            <input type="email" class="form-control" id="EmailInput" placeholder="Vôtre adresse mail " name="Email">
+            <div class="invalid-feedback">
+L'email n'est pas au bon format
+            </div> 
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" class="btn btn-primary" id="btnContactEnvoyer">Envoyer</button>
         </div>
     </form>
 </div>
 </div>
+<script src="/js/script.js"></script> <script src="/js/Contact.js"></script>
