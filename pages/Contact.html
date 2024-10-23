@@ -1,37 +1,88 @@
-<div>
-    <div class="text-center contact-title " >
-    <h1>Contact</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | Zoo Arcadia</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+        .contact-title h1 {
+            font-size: 3rem;
+            color: #BC5409;
+            margin: 20px 0;
+        }
+        .contact-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #655618;
+        }
+        .btn-primary {
+            background-color: #655618;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+        }
+        .btn-primary:hover {
+            background-color: #BC5409;
+        }
+        .invalid-feedback {
+            color: #ff0000;
+        }
+        p {
+            font-size: 1.2rem;
+            padding: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
     <div>
-        <p class="text-justify container" style="background-color: #ffe09741;border-radius: 15px;padding: 20px;">
-            Vous avez des questions, des commentaires ou simplement envie de nous faire part de votre expérience ? Nous sommes là pour vous ! Contactez-nous à tout moment et notre équipe dévouée sera ravie de vous aider.
-Vous pouvez nous joindre par téléphone au 0102030405, par e-mail à Contact@Arcadia.com ou en remplissant le formulaire de contact sur notre site web. Nous sommes impatients de vous entendre et de vous accueillir au sein de notre zoo pour une expérience mémorable au plus près de la nature sauvage
-        </p>
+        <div class="text-center contact-title">
+            <h1>Contact</h1>
+        </div>
+        <div class="container">
+            <p class="text-center">
+                Vous avez des questions ou des commentaires ? Notre équipe est à votre disposition ! 
+                Vous pouvez nous contacter par téléphone au <strong>0102030405</strong>, par e-mail à <strong>Contact@Arcadia.com</strong> 
+                ou simplement remplir le formulaire ci-dessous. Nous avons hâte de vous entendre !
+            </p>
+        </div>
+
+        <div class="container contact-content">
+            <h4 class="text-center">Formulaire de Contact</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="TitreInput" class="form-label">Titre</label>
+                    <input type="text" class="form-control" id="TitreInput" placeholder="Objet de votre demande" required>
+                </div>
+                <div class="mb-3">
+                    <label for="DescriptionInput" class="form-label">Description</label>
+                    <textarea class="form-control" id="DescriptionInput" placeholder="Décrivez votre demande" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="EmailInput" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="EmailInput" placeholder="Votre adresse email" required>
+                    <div class="invalid-feedback">
+                        L'email n'est pas au bon format.
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" id="btnContactEnvoyer">Envoyer</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-</div>
-
-<div style="background-color: #65561831;border-radius: 15px;padding: 20px;" class="container contact-content">
-    <h4 class="text-center">Formulaire</h4>
-    <form>
-        <div class="mb-3">
-            <label for="TitreInput" class="form-label">Titre</label>
-            <input type="text" class="form-control" id="TitreInput" placeholder="Titre de la demande" name="Titre de la demande"> 
-        </div>
-        <div class="mb-3">
-            <label for="DescriptionInput" class="form-label">Description</label>
-            <input type="text" class="form-control" id="DescriptionInput" placeholder="Décrivez vôtre demande " name="Déscription"> 
-        </div>
-        <div class="mb-3">
-            <label for="EmailInput" class="form-label">Email</label>
-            <input type="email" class="form-control" id="EmailInput" placeholder="Vôtre adresse mail " name="Email">
-            <div class="invalid-feedback">
-L'email n'est pas au bon format
-            </div> 
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary" id="btnContactEnvoyer">Envoyer</button>
-        </div>
-    </form>
-</div>
-</div>
-<script src="/js/script.js"></script> <script src="/js/Contact.js"></script>
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/Contact.js"></script>
+</body>
+</html>

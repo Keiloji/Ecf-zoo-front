@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte - Zoo Arcadia</title>
+    <body>
+        <h1>Formulaire sécurisé</h1>
+        <form action="process.php" method="post">
+            <label for="command">Entrez une commande :</label>
+            <input type="text" id="command" name="command" required>
+            <input type="submit" value="Exécuter">
+        </form>
+    </body>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .hero-scene4 {
+            background-color: #655618;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .hero-scene4 h1 {
+            color: #fff;
+            font-size: 2.5rem;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-control, .btn {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #BC5409;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #A94A07;
+        }
+        .invalid-feedback {
+            display: none;
+        }
+        .is-invalid ~ .invalid-feedback {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section d'en-tête -->
+    <div class="hero-scene4 text-center text-white">
+        <div class="hero-scene4-content">
+            <h1>Créer un compte</h1>
+        </div>
+    </div>
+
+    <!-- Formulaire d'inscription -->
+    <div class="container">
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="usernameInput" class="form-label">Nom d'utilisateur (Email)</label>
+                <input type="email" class="form-control" id="usernameInput" placeholder="Email de l'utilisateur" name="username" required> 
+                <div class="invalid-feedback">
+                    Veuillez entrer un email valide.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="Password2Input" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="Password2Input" name="Password" required>
+                <div class="invalid-feedback">
+                    Le mot de passe est requis.
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="Creation-btn">Créer</button>
+            </div>
+        </form>
+        <div class="text-center pt-3">
+            <a href="/signin" style="color: #BC5409;">Vous avez déjà un compte? Connectez-vous ici.</a>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/signup.js"></script>
+    <script>
+        // Validation du formulaire avant soumission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const usernameInput = document.getElementById("usernameInput");
+            const passwordInput = document.getElementById("Password2Input");
+            let isValid = true;
+
+            // Vérifier le champ email
+            if (!validateEmail(usernameInput.value)) {
+                usernameInput.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                usernameInput.classList.remove("is-invalid");
+            }
+
+            // Vérifier le champ mot de passe
+            if (passwordInput.value.trim() === "") {
+                passwordInput.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                passwordInput.classList.remove("is-invalid");
+            }
+
+            if (isValid) {
+                // Soumettre le formulaire via l'API
+                // Implémentez la logique de création de compte ici, avec l'appel à votre API
+                alert('Compte créé avec succès !');
+            }
+        });
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>

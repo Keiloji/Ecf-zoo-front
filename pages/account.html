@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte - Zoo Arcadia</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        .form-control, .btn {
+            border-radius: 0;
+        }
+        .form-section, .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #655618;
+            border-radius: 15px;
+            border: none;
+        }
+        .card-header {
+            background-color: #d3b2675d;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire sécurisé</h1>
+    <form action="process.php" method="post">
+        <label for="command">Entrez une commande :</label>
+        <input type="text" id="command" name="command" required>
+        <input type="submit" value="Exécuter">
+    </form>
+    <!-- Section Admin -->
+    <div class="container p-4" data-show="admin">
+        <h1 class="text-center mb-4">Espace Administrateur</h1>
+
+        <!-- Section Création de Compte -->
+        <div class="form-section">
+            <h2>Créer un Compte</h2>
+            <form id="createAccountForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Entrez l'email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de Passe</label>
+                    <input type="password" class="form-control" id="password" placeholder="Entrez le mot de passe" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Rôle</label>
+                    <select class="form-control" id="role" required>
+                        <option value="">Sélectionnez un rôle</option>
+                        <option value="employé">Employé</option>
+                        <option value="vétérinaire">Vétérinaire</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Créer le Compte</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Section Gestion du Zoo -->
+        <div class="form-section">
+            <h2>Gestion du Zoo</h2>
+            <button class="btn btn-secondary btn-block" style="background-color: #65561880;">Services</button>
+            <button class="btn btn-secondary btn-block" style="background-color: #6556187a;">Horaires</button>
+            <button class="btn btn-secondary btn-block" style="background-color: #6556187a;">Habitats</button>
+            <button class="btn btn-secondary btn-block" style="background-color: #65561876;">Animaux</button>
+        </div>
+
+        <!-- Section Comptes Rendus des Vétérinaires -->
+        <div class="form-section">
+            <h2>Comptes Rendus des Vétérinaires</h2>
+            <input type="text" class="form-control mb-2" placeholder="Filtrer par animal">
+            <input type="date" class="form-control mb-2">
+            <div class="text-center">
+                <button class="btn btn-primary btn-block">Appliquer les filtres</button>
+            </div>
+            <div id="reportList">
+                <p>Aucun compte rendu disponible.</p>
+            </div>
+        </div>
+
+        <!-- Section Dashboard -->
+        <div class="dashboard form-section">
+            <h2>Tableau de Bord</h2>
+            <p>Nombre de consultations par animal :</p>
+            <div id="dashboardContent">
+                <p>Données en cours de chargement...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Employé -->
+    <div class="container p-4" data-show="employé">
+        <h1 class="text-center mb-4">Espace Employé</h1>
+
+        <!-- Valider/Invalider des Avis -->
+        <div class="form-section">
+            <h2>Valider/Invalider des Avis</h2>
+            <div id="avisList">
+                <!-- Liste des avis -->
+            </div>
+        </div>
+
+        <!-- Modifier les Services -->
+        <div class="form-section">
+            <h2>Modifier les Services</h2>
+            <form id="serviceForm">
+                <div class="form-group">
+                    <label for="serviceName">Nom du Service</label>
+                    <input type="text" class="form-control" id="serviceName" placeholder="Nom du service" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Mettre à jour le Service</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Ajouter une Consommation de Nourriture -->
+        <div class="form-section">
+            <h2>Ajouter une Consommation de Nourriture</h2>
+            <form id="foodForm">
+                <div class="form-group">
+                    <label for="animalSelect">Animal</label>
+                    <select class="form-control" id="animalSelect" required>
+                        <option value="">Sélectionnez un animal</option>
+                        <!-- Options dynamiques ici -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dateInput">Date</label>
+                    <input type="date" class="form-control" id="dateInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="timeInput">Heure</label>
+                    <input type="time" class="form-control" id="timeInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="foodInput">Nourriture</label>
+                    <input type="text" class="form-control" id="foodInput" placeholder="Type de nourriture" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantityInput">Quantité (kg)</label>
+                    <input type="number" class="form-control" id="quantityInput" placeholder="Quantité en kg" required>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Ajouter la Consommation</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section Vétérinaire -->
+    <div class="container p-4" data-show="vétérinaire">
+        <h1 class="text-center mb-4">Espace Vétérinaire</h1>
+
+        <!-- Comptes Rendus par Animal -->
+        <div class="form-section">
+            <h2>Comptes Rendus par Animal</h2>
+            <form id="compteRenduForm">
+                <div class="form-group">
+                    <label for="animalSelection">Animal</label>
+                    <select class="form-control" id="animalSelection" required>
+                        <option value="">Sélectionnez un animal</option>
+                        <!-- Options dynamiques ici -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reportText">Compte Rendu</label>
+                    <textarea class="form-control" id="reportText" rows="3" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Commentaires sur les Habitats -->
+        <div class="form-section">
+            <h2>Commentaires sur les Habitats</h2>
+            <form id="commentaireForm">
+                <div class="form-group">
+                    <label for="habitatSelect">Habitat</label>
+                    <select class="form-control" id="habitatSelect" required>
+                        <option value="">Sélectionnez un habitat</option>
+                        <!-- Options dynamiques ici -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="commentaireText">Commentaire</label>
+                    <textarea class="form-control" id="commentaireText" rows="3" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Alimentation des Animaux -->
+        <div class="form-section">
+            <h2>Alimentation des Animaux</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Animal</th>
+                        <th>Date</th>
+                        <th>Heure</th>
+                        <th>Nourriture</th>
+                        <th>Quantité</th>
+                    </tr>
+                </thead>
+                <tbody id="alimentationTable">
+                    <!-- Contenu dynamique ici -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/script.js"></script>
+    <script src="/js/account.js"></script>
+</body>
+</html>

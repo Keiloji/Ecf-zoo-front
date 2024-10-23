@@ -6,90 +6,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css"/>
+    <link rel="stylesheet" href="scss/main.scss"/>
     <title>Document</title>
 </head>
 <body>
-
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">ARCADIA</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active"  href="/">Acceuil</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="/NosServices">Nos services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Habitats">Habitats</a>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Accueil</a>
                         </li>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="/account" data-show="connected" >
-                                Mon Compte
-                            </a>
-                            </li>
-                    <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/NosServices">Nos services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Habitats">Habitats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/account" data-show="connected">Mon Compte</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/Contact">Contact</a>
-                            </li>
-                    <li class="nav-item" data-show="disconnected">
-                        <a class="nav-link" href="/signin" >
-                            Connexion
-                        </a>
-                        
+                        </li>
+                        <li class="nav-item" data-show="disconnected">
+                            <a class="nav-link" href="/Signin">Connexion</a>
                         </li>
                         <li class="nav-item" data-show="connected">
-                            <button class="nav-link" id="signout-btn">
-                                Déconnexion
-                            </button>
-                            </li>
-                    
-                </ul>
+                            <button class="nav-link" id="signout-btn">Déconnexion</button>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            </nav>
+        </nav>
     </header>
 
-    <div data-controller="hello" data-hello-target="message" data-hello-content-value="Bienvenue au zoo Arcadia Zoo!"></div>
-
-
-<button data-action="hello#greet">Say Hello</button>
-
-
-<button data-action="hello#changeContent" data-new-content="New dynamic message!">Change Content</button>
-
-
     <main id="main-page">
-        <!--Le contenu de la page  sera injectée ici-->
+        <!--Le contenu de la page sera injectée ici-->
     </main>
 
     <footer class="bg-dark text-white text-center footer">
-            <div class="row">
-        <div class="col-12 col-lg-4">
+        <div class="row">
+            <div class="col-12 col-lg-4">
                 <h3 class="text-secondary">Nos Horaires</h3>
-                <p>Du Lundi au Dimanche    9h00 - 18h00 (horaires d'été)   10h00 - 17h00 (horaires d'hiver)</p>     
-        </div>       
-        <div class="col-6 col-lg-4">
-            <p>ARCADIA 35380 <br/>
-                Paimpont<br/>
-                0102030405</p>
-    </div> 
-    <div class="col-6 col-lg-4">
-        <a class="text-white" href="mailto:Contact@Arcadia.com">Contact@Arcadia.com</a>
-    </div>
+                <p>Du Lundi au Dimanche 9h00 - 18h00 (horaires d'été) 10h00 - 17h00 (horaires d'hiver)</p>
             </div>
+            <div class="col-6 col-lg-4">
+                <p>ARCADIA 35380<br/>Paimpont<br/>0102030405</p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <a class="text-white" href="mailto:Contact@Arcadia.com">Contact@Arcadia.com</a>
+            </div>
+        </div>
     </footer>
-        <script src="js/script.js"></script> 
     <script type="module" src="Router/router.js"></script>
+    <script src="js/script.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

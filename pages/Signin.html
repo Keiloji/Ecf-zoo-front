@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Zoo Arcadia</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .hero-scene5 {
+            background-color: #655618;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .hero-scene5 h1 {
+            color: #fff;
+            font-size: 2.5rem;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-control, .btn {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #655618;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+        }
+        .invalid-feedback {
+            color: red;
+        }
+        .text-center a {
+            color: #BC5409;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Formulaire sécurisé</h1>
+        <form action="process.php" method="post">
+            <label for="command">Entrez une commande :</label>
+            <input type="text" id="command" name="command" required>
+            <input type="submit" value="Exécuter">
+        </form>
+    
+    <!-- Section Héro pour la Connexion -->
+    <div class="hero-scene5 text-center text-white">
+        <h1>Connexion</h1>
+    </div>
+
+    <!-- Formulaire de Connexion -->
+    <div class="container pt-2">
+        <form id="signinForm">
+            <div class="mb-3">
+                <label for="MailInput" class="form-label">Email</label>
+                <input type="email" class="form-control" autocomplete="email" id="MailInput" placeholder="test@mail.fr" name="Email" required>
+                <div class="invalid-feedback">
+                    Veuillez entrer une adresse email valide.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="PasswordInput" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" autocomplete="current-password" id="PasswordInput" name="Password" required>
+                <div class="invalid-feedback">
+                    Le mot de passe est incorrect.
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="btnSignin">Connexion</button>
+            </div>
+        </form>
+        <div class="text-center pt-3">
+            <a href="/">Cette page est réservée au personnel du zoo, merci de votre compréhension.<br> Retour en page d'accueil</a>
+        </div>
+    </div>
+
+    <!-- JS pour la validation du formulaire -->
+    <script src="/js/script.js"></script>
+    <script src="/js/Signin.js"></script>
+    <script>
+        // Script de validation et soumission
+        const mailInput = document.getElementById("MailInput");
+        const passwordInput = document.getElementById("PasswordInput");
+        const signinForm = document.getElementById("signinForm");
+        const btnSignin = document.getElementById("btnSignin");
+
+        signinForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            checkCredentials();
+        });
+
+        function checkCredentials() {
+            const email = mailInput.value;
+            const password = passwordInput.value;
+
+            // Appeler l'API pour vérifier les credentials (API simulée ici)
+            if (email === "test@mail.com" && password === "123") {
+                // Si les credentials sont corrects, stocker le token
+                const token = "exempledetoken12345";
+                setToken(token);
+
+                // Définir le rôle de l'utilisateur dans un cookie (admin ici par exemple)
+                setCookie(RoleCookieName, "admin", 7);
+                //window.location.replace("/"); // Redirection vers la page d'accueil
+            } else {
+                // Gestion des erreurs pour les champs invalides
+                mailInput.classList.add("is-invalid");
+                passwordInput.classList.add("is-invalid");
+            }
+        }
+
+        function setToken(token) {
+            // Implémentation de la fonction pour stocker le token dans un cookie
+            setCookie("accesstoken", token, 7);
+        }
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+    </script>
+</body>
+</html>
